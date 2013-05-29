@@ -14,7 +14,7 @@ int Sensor_Pin = 6;      // choose the Sensor_Pin
 int val = 0;             // variable for reading the Sensor_Pin status
 int old_val = -1;
 int count = 0;
-bool isDebugEnabled;     // enable or disable debug in this example
+bool isDebugEnabled;     // enable or disable debug
 
 void setup() {
   pinMode(Led_Pin, OUTPUT);    // declare Led_Pin as output
@@ -41,7 +41,7 @@ void loop(){
         Serial.print(count);
         Serial.println(" times");
       }
-      smartthing.send("doorbell");
+      smartthing.send("ring");
     }
   }
   old_val = val;
